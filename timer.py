@@ -98,7 +98,7 @@ entry_hour = tk.Entry(window, width=30)
 entry_minutes = tk.Entry(window, width=30)
 entry_seconds = tk.Entry(window, width=30)
 checkbox_var = tk.StringVar()
-checkbox = tk.Checkbutton(window, text='Check for Music',
+checkbox = tk.Checkbutton(window, text='Check for timer complete sound.',
                           onvalue=True, offvalue=False,
                           variable=checkbox_var)  # creating checkbox
 button = tk.Button(window, text="Set Countdown", command=get_input,
@@ -128,10 +128,6 @@ printed_time_lbl.pack()
 timer_txt_label.pack()
 timer_label.pack()
 cancel_button.pack()
-
-
-#tk.Label(window, text="Enter time in HH:MM:SS", font='bold').pack()
-#tk.Label(window, text="Must be less than 24 hrs").pack()
 
 
 current_time()
