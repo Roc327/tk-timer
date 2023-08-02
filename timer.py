@@ -61,14 +61,14 @@ def countdown(time_seconds):
     then prepares it to be updated to the label then increment the loop
     """
     global running
-    
+    running = True    
     while time_seconds:
-        timer = timedelta(seconds=time_seconds)
-        timer_label.config(text=timer)
         window.update()
-        time.sleep(1)
-        time_seconds -= 1
         if running == True:
+            timer = timedelta(seconds=time_seconds)
+            timer_label.config(text=timer)
+            time.sleep(1)
+            time_seconds -= 1
             continue
         else:
             break
